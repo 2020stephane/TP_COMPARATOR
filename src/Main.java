@@ -14,6 +14,8 @@
 
 public class Main {
 
+    Societe entreprise;
+
     public Main() {
 
         Etudiant etudiant1 = new Etudiant("Dupont", "Albert", 22);
@@ -40,13 +42,26 @@ public class Main {
         print(etudiant2.toString());
         print(etudiant3.toString());
         print(etudiant4.toString());
+        entreprise = new Societe();
+        Etudiant pers = new Etudiant ("Durand","Michel",55);
+        entreprise.recruter(new Etudiant( "Mercier", "Jean",50 ) );
+        entreprise.recruter( new Etudiant( "Morin", "Nathalie",35 ) );
+        entreprise.recruter( new Etudiant( "Martin", "Louis",35 ) );
+        entreprise.recruter( new Etudiant( "Dupont", "Josette",25 ) );
+        entreprise.recruter( new Etudiant( "Charpentier", "Pierre",25 ) );
+        entreprise.recruter( pers );
+        afficher();
+        print(entreprise.congedier( pers ));
     }
 
     public static void main(String[] args) {
         javax.swing.SwingUtilities.invokeLater(Main::new);
     }
-    public void newline() {
-        System.out.println("\n");
+    public void afficher() {
+
+        for (Etudiant e : entreprise.getListePersonnel()) {
+            print(e);
+        }
     }
     public void print(Object o) {
         System.out.println(o);

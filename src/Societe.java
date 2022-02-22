@@ -21,24 +21,31 @@ public class Societe {
 
     /**
      * Constructor Societe
-     * @param listePersonnel
+     *
      */
 
-    public Societe(ArrayList<Etudiant> listePersonnel) {
-        ListePersonnel = listePersonnel;
+    public Societe() {
+        ListePersonnel = new ArrayList<>();
     }
 
+
     /**
-     * Methode recruter
-     * @param e
+     * Methode
+     *
      */
+
+    public ArrayList<Etudiant> getListePersonnel() {
+        return ListePersonnel;
+    }
+
 
     public void recruter(Etudiant e) {
         ListePersonnel.add(e);
     }
-    public void congedier(Etudiant e) {
+    public String congedier(Etudiant e) {
         ListePersonnel.remove(e);
         messcongedier = e.getPrenom() + " " + e.getNom() +" quitte l'entreprise";
+        return messcongedier;
     }
 
 }
