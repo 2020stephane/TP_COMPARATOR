@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 /*******************************************************************************
  * Copyright (c) 2022.
  * Auteur : Stephane Brisse
@@ -7,9 +9,9 @@
  * IDE : INTELLIJ IDEA
  * Language : JAVA
  * Projet : TP_COMPARATOR
- * Créer le :22/02/2022 18:20
+ * Créer le : 22/02/2022
  * Nom du fichier : Etudiant.java
- * Last Modified : 22/02/2022 18:20
+ * Last Modified : 22/02/2022 18:40
  ******************************************************************************/
 
 public class Etudiant {
@@ -52,9 +54,16 @@ public class Etudiant {
     public void setNom(String nom) {
         this.nom = nom;
     }
+
     public boolean equals(Etudiant e) {
-        if (this.getNom() == e.getNom() & this.getPrenom() == e.getPrenom() & this.getAge() == e.getAge()) {
+        if (this.nom.equalsIgnoreCase(e.getNom()) & this.prenom.equalsIgnoreCase(e.getPrenom()) &
+                this.age == e.age) {
             return true;
-        } else { return false; }
+        } else return false;
+    }
+    public String toString() {
+        String temp = "Identite de l'etudiant ------> " + this.getNom() + " " + this.getPrenom() +
+                " " + this.getAge() + " " + "ans";
+        return temp;
     }
 }

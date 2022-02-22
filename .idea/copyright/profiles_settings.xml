@@ -1,7 +1,9 @@
 <component name="CopyrightManager">
-  <settings default="copy">
+  <settings default="mycopy">
     <module2copyright>
-      <element module="All" copyright="copy" />
+      <element module="Project Files" copyright="mycopy" />
+      <element module="All Changed Files" copyright="mycopy" />
+      <element module="All" copyright="mycopy" />
     </module2copyright>
     <LanguageOptions name="__TEMPLATE__">
       <option name="separateBefore" value="true" />
