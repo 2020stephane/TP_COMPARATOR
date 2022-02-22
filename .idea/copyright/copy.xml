@@ -1,0 +1,6 @@
+<component name="CopyrightManager">
+  <copyright>
+    <option name="notice" value="Copyright (c) &amp;#36;originalComment.match(&quot;Copyright \(c\) (\d+)&quot;, 1, &quot;-&quot;, &quot;&amp;#36;today.year&quot;)&amp;#36;today.year.&#10;Auteur : Stephane Brisse&#10;Mail   : stephanebrisse@gmail.com&#10;https://2020stephane.github.io/stephane&#10;-------------------------------------------&#10;IDE : INTELLIJ IDEA&#10;Language : JAVA&#10;Projet : &amp;#36;project.name&#10;Créer le :&amp;#36;today&#10;Nom du fichier : &amp;#36;file.fileName&#10;Last Modified : &amp;#36;file.lastModified" />
+    <option name="myName" value="copy" />
+  </copyright>
+</component>
