@@ -21,7 +21,7 @@ public class Main {
         Etudiant etudiant3 = new Etudiant("Mercier", "Jean", 55);
         Etudiant etudiant4 = new Etudiant("MERCIER", "Jean", 55);
         if (etudiant1.equals(etudiant2)) {
-
+            System.out.println("etudiant1 et etudiant2 sont le meme etudiant");
         }
 
     }
