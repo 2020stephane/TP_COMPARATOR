@@ -1,5 +1,3 @@
-import java.util.Collections;
-
 /*******************************************************************************
  * Copyright (c) 2022.
  * Auteur : Stephane Brisse
@@ -9,10 +7,12 @@ import java.util.Collections;
  * IDE : INTELLIJ IDEA
  * Language : JAVA
  * Projet : TP_COMPARATOR
- * Créer le :22/02/2022
+ * Créer le : 22/02/2022
  * Nom du fichier : Main.java
- * Last Modified : 22/02/2022 20:00
+ * Last Modified : 23/02/2022 11:07
  ******************************************************************************/
+
+import java.util.Collections;
 
 public class Main {
 

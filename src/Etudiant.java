@@ -10,7 +10,7 @@
  * Projet : TP_COMPARATOR
  * Créer le : 22/02/2022
  * Nom du fichier : Etudiant.java
- * Last Modified : 22/02/2022 18:40
+ * Last Modified : 23/02/2022 10:15
  ******************************************************************************/
 
 public class Etudiant implements Comparable{

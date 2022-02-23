@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TP_COMPARATOR:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/TP_COMPARATOR_jar</output-path>
+    <root id="archive" name="TP_COMPARATOR.jar">
+      <element id="module-output" name="TP_COMPARATOR" />
+    </root>
+  </artifact>
+</component>

@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 /*******************************************************************************
  * Copyright (c) 2022.
  * Auteur : Stephane Brisse
@@ -11,8 +9,10 @@ import java.util.ArrayList;
  * Projet : TP_COMPARATOR
  * Créer le : 22/02/2022
  * Nom du fichier : Societe.java
- * Last Modified : 22/02/2022 22:19
+ * Last Modified : 23/02/2022 07:39
  ******************************************************************************/
+
+import java.util.ArrayList;
 
 public class Societe {
 
