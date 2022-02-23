@@ -48,30 +48,38 @@ public class Main {
         entreprise = new Societe();
         Etudiant pers = new Etudiant ("Durand","Michel",55);
         entreprise.recruter(new Etudiant( "Mercier", "Jean",50 ) );
+        entreprise.recruter( new Etudiant( "Dupont", "Josette",25 ) );
+        entreprise.recruter( new Etudiant( "Martin", "Louis",35 ) );
         entreprise.recruter(new Etudiant( "Mercier", "Jeanne",50 ) );
         entreprise.recruter( new Etudiant( "Morin", "Nathalie",35 ) );
-        entreprise.recruter( new Etudiant( "Martin", "Louis",35 ) );
-        entreprise.recruter( new Etudiant( "Dupont", "Josette",25 ) );
+        entreprise.recruter( new Etudiant( "Martin", "Louise",25 ) );
+        entreprise.recruter( new Etudiant( "Dupont", "Josette",35 ) );
+        entreprise.recruter( new Etudiant( "Martin", "Liam",45 ) );
         entreprise.recruter( new Etudiant( "Charpentier", "Pierre",35 ) );
+        entreprise.recruter( new Etudiant( "Dupont", "Josette",45 ) );
         entreprise.recruter( new Etudiant( "Charpentier", "Pierre",25 ) );
 
         entreprise.recruter( pers );
         printseparator();
+        print("liste brut");
         afficher();
         printseparator();
         print(entreprise.congedier( pers ));
         afficher();
         entreprise.getListePersonnel().sort(new CompareEtudiant());
         printseparator();
+        print("liste triee dans l'ordre");
         afficher();
         printseparator();
         Collections.reverse(entreprise.getListePersonnel());
+        print("liste triee dans l'ordre inverse");
         afficher();
     }
 
     public static void main(String[] args) {
-        javax.swing.SwingUtilities.invokeLater(Main::new);
+        new Main();
     }
+
     public void afficher() {
 
         for (Etudiant e : entreprise.getListePersonnel()) {
