@@ -1,4 +1,3 @@
-import java.util.Locale;
 
 /*******************************************************************************
  * Copyright (c) 2022.
@@ -14,7 +13,7 @@ import java.util.Locale;
  * Last Modified : 22/02/2022 18:40
  ******************************************************************************/
 
-public class Etudiant {
+public class Etudiant implements Comparable{
 
     private String prenom;
     private String nom;
@@ -54,16 +53,31 @@ public class Etudiant {
     public void setNom(String nom) {
         this.nom = nom;
     }
+    @Override
+    public boolean equals(Object e) {
 
-    public boolean equals(Etudiant e) {
-        if (this.nom.equalsIgnoreCase(e.getNom()) & this.prenom.equalsIgnoreCase(e.getPrenom()) &
-                this.age == e.age) {
-            return true;
-        } else return false;
+        Etudiant etudiant = (Etudiant) e;
+        return this.nom.equalsIgnoreCase(etudiant.getNom()) & this.prenom.equalsIgnoreCase(etudiant.getPrenom()) &
+                this.age == etudiant.age;
     }
     public String toString() {
-        String temp = "Identite de l'etudiant ------> " + this.getNom() + " " + this.getPrenom() +
+        return "Identite de l'etudiant ------> " + this.getNom() + " " + this.getPrenom() +
                 " " + this.getAge() + " " + "ans";
-        return temp;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+       Etudiant e = (Etudiant) o;
+       if ( (this.getNom().compareToIgnoreCase(e.getNom()) == 0)) {
+           if ((this.getPrenom().compareToIgnoreCase(e.getPrenom()) == 0)) {
+               if ( (this.getAge() == e.getAge()) ) {
+                   return 0;
+               } else {
+                   if (this.getAge() < e.getAge() ) {
+                      return -1;
+                   }else return 1;
+               }
+           } else { return this.getPrenom().compareToIgnoreCase(e.getPrenom()); }
+        } else { return this.getNom().compareToIgnoreCase(e.getNom()); }
     }
 }

@@ -20,7 +20,7 @@ public class Societe {
     private String messcongedier;
 
     /**
-     * Constructor Societe
+     * Constructors
      *
      */
 

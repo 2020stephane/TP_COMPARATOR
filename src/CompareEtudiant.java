@@ -1,4 +1,3 @@
-import java.util.Comparator;
 /*******************************************************************************
  * Copyright (c) 2022.
  * Auteur : Stephane Brisse
@@ -10,26 +9,23 @@ import java.util.Comparator;
  * Projet : TP_COMPARATOR
  * Créer le : 22/02/2022
  * Nom du fichier : CompareEtudiant.java
- * Last Modified : 22/02/2022 22:59
+ * Last Modified : 23/02/2022 10:32
  ******************************************************************************/
 
-public class CompareEtudiant implements Comparator<Etudiant> {
+import java.util.Comparator;
 
+public class CompareEtudiant implements Comparator<Etudiant> {
 
     /**
      * Constructors
      */
-    public CompareEtudiant() {
-    }
+
+    public CompareEtudiant() {  }
 
     /**
      * Methodes
      */
 
     @Override
-    public int compare(Etudiant o1, Etudiant o2) {
-
-        return 0;
-    }
-
+    public int compare(Etudiant o1, Etudiant o2) { return o1.compareTo(o2);  }
 }

@@ -1,3 +1,5 @@
+import java.util.Collections;
+
 /*******************************************************************************
  * Copyright (c) 2022.
  * Auteur : Stephane Brisse
@@ -22,6 +24,7 @@ public class Main {
         Etudiant etudiant2 = new Etudiant("DUPONT", "albert", 22);
         Etudiant etudiant3 = new Etudiant("Mercier", "Jean", 55);
         Etudiant etudiant4 = new Etudiant("MERCIER", "Jean", 55);
+
         if (etudiant1.equals(etudiant2)) {
             print("etudiant1 et etudiant2 sont le meme etudiant");
         } else { print("etudiant1 et etudiant2 sont deux etudiants differents"); }
@@ -37,21 +40,33 @@ public class Main {
         if (etudiant3.equals(etudiant4)) {
             print("etudiant3 et etudiant4 sont le meme etudiant");
         } else { print("etudiant3 et etudiant4 sont deux etudiants differents"); }
-        print("-----------------------------------------------------------------------");
         print(etudiant1.toString());
         print(etudiant2.toString());
         print(etudiant3.toString());
         print(etudiant4.toString());
+        print("---------------------------------FIN EXO 1----------------------------------------");
         entreprise = new Societe();
         Etudiant pers = new Etudiant ("Durand","Michel",55);
         entreprise.recruter(new Etudiant( "Mercier", "Jean",50 ) );
+        entreprise.recruter(new Etudiant( "Mercier", "Jeanne",50 ) );
         entreprise.recruter( new Etudiant( "Morin", "Nathalie",35 ) );
         entreprise.recruter( new Etudiant( "Martin", "Louis",35 ) );
         entreprise.recruter( new Etudiant( "Dupont", "Josette",25 ) );
+        entreprise.recruter( new Etudiant( "Charpentier", "Pierre",35 ) );
         entreprise.recruter( new Etudiant( "Charpentier", "Pierre",25 ) );
+
         entreprise.recruter( pers );
+        printseparator();
         afficher();
+        printseparator();
         print(entreprise.congedier( pers ));
+        afficher();
+        entreprise.getListePersonnel().sort(new CompareEtudiant());
+        printseparator();
+        afficher();
+        printseparator();
+        Collections.reverse(entreprise.getListePersonnel());
+        afficher();
     }
 
     public static void main(String[] args) {
@@ -65,5 +80,8 @@ public class Main {
     }
     public void print(Object o) {
         System.out.println(o);
+    }
+    public void printseparator() {
+        System.out.println("----------------------------------------------------------------------");
     }
 }
